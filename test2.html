@@ -1,0 +1,156 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-size:normal;
+}
+header{
+background-color:#3a3a3a;
+height:50px;
+}
+header h1,header span a{
+color:#fff;
+}
+header h1{
+margin-left:80px;
+}
+header span{
+float:right;
+margin-top:-58px;
+margin-right:100px;
+font-size:0.8em;
+}
+
+#one{
+background-color:#66bb33;
+height:180px;
+position:relative;
+}
+#one ul{
+position:absolute;
+bottom:0px;
+right:100px;
+}
+#one li{
+float:left;
+list-style-type: none;
+border:1px solid #000;
+background-color:#b2dd99;
+padding:3px;
+margin:3px;
+}
+
+nav{
+height:50px;
+border-bottom:1px solid #B0B0B0;
+position:relative;
+}
+nav ul{
+position:absolute;
+bottom:0px;
+margin-bottom:0;
+margin-left:16%;
+padding:0;
+}
+nav li{
+float: left;
+list-style-type: none;
+width: 70px;
+border-top-left-radius:20px;
+border-top-right-radius:20px;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  line-height: 2;
+  background-color:#eee;
+  color: black;
+  text-align: center;
+  border:1px solid #eee;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+ nav a:focus,nav a:hover{
+ background-color:#fff;
+ border-bottom-color:#fff;
+ }
+ 
+ section{
+width:70%;
+margin:0 auto;
+ }
+.row {
+  display: flex;
+  justify-content:center;
+}
+.item{
+flex: 1;
+border:1px solid #b0b0b0;
+height:100px;
+padding:10px;
+margin:10px;
+}
+.item p{
+text-align:center;
+}
+
+footer{
+background-color:#666;
+height:80px;
+}
+footer p{
+color:#fff;
+font-size:0.8em;
+text-align:center;
+line-height:3;
+}
+</style>
+
+</head>
+<body>
+<header>
+<h1>Logo</h1> 
+<span><a href="#">Github</a> <a href="#">Register</a> <a href="#">Login</a></span>
+</header>
+<div id="one">
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+</div>
+
+<nav>
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">PROFILE</a></li>
+<li><a href="#">ABOUT</a></li>
+</ul>
+</nav>
+<section>
+<div class="row">
+<div class="item"><p>This is Content 1</p></div>
+<div class="item"><p>Maybe Content 2</p></div>
+<div class="item"><p>Content 3</p></div>
+</div>
+<div class="row">
+<div class="item"><p>Content 4</p></div>
+<div class="item"><p>Content 5</p></div>
+<div class="item"><p>Content 6</p></div>
+<div class="item"><p>Content 7</p></div>
+</div>
+<div class="row">
+<div class="item"><p>Content 8</p></div>
+<div class="item"><p>Content 9</p></div>
+<div class="item"><p>Content 10</p></div>
+</div>
+</section>
+<footer>
+<p>© 2018 ife.baidu.com<p>
+</footer>
+
+</body>
+</html>
