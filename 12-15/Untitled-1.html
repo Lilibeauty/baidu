@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%
+			}
+			
+			h1 {
+				font-size: 24px;
+				font-weight: lighter;
+			}
+			
+			h2 {
+				margin: 0;
+				padding-top: 15px;
+				padding-left: 25px;
+				font-size: 18px;
+			}
+			
+			h3 {
+				font-size: 16px;
+			}
+			
+			p {
+				font-size: 14px;
+			}
+			
+			body>div {
+				display: flex;
+				/*height: 100%;*/
+			}
+			
+			.leftdiv {
+				display: flex;
+				/*height: 100%;*/
+			}
+			
+			.leftdiv aside {
+				width: 100px;
+				/*padding: 20px;*/
+				background-color: #1d2531;
+				/*height: 100%;*/
+			}
+			
+			.leftdiv .headplace {
+				width: 100px;
+				position: fixed;
+				top: 0px;
+			}
+			
+			.leftdiv .headplace img {
+				display: block;
+				margin: 20px auto;
+			}
+			
+			.leftdiv .headplace .hidden {
+				position: absolute;
+				margin-left: 0;
+				top: 25px;
+				display: none;
+			}
+			
+			.leftdiv .headplace a:hover .hidden,
+			.leftdiv .headplace a:focus .hidden {
+				display: block;
+			}
+			
+			.leftdiv aside .item {
+				margin: 0 auto;
+			}
+			
+			.leftdiv aside #item1 {
+				margin-top: -60px;
+				margin-bottom: 40px;
+			}
+			
+			.leftdiv aside #item2 {
+				margin-top: -67px;
+				margin-bottom: 35px;
+			}
+			
+			.leftdiv aside #item3 {
+				margin-top: -63px;
+				margin-bottom: 40px;
+			}
+			
+			.leftdiv aside #item4 {
+				margin-top: -60px;
+				margin-bottom: 40px;
+			}
+			
+			.leftdiv .footplace {
+				width: 100px;
+				padding: 15px 20px 15px 25px;
+				position: fixed;
+				bottom: 0px;
+			}
+			
+			.leftdiv .footplace img {
+				padding-right: 15px;
+			}
+			
+			nav {
+				background-color: #222c3c;
+				width: 250px;
+				/*height: 100%;*/
+			}
+			
+			nav div p {
+				color: #5b6779;
+				font-size: 12px;
+				padding-left: 40px;
+				padding-top: 15px;
+			}
+			
+			nav div img {
+				float: right;
+				margin-right: 30px;
+				margin-top: -26px;
+			}
+			
+			nav li {
+				list-style-type: none;
+				color: #b7c0cd;
+				font-size: 14px;
+				line-height: 2;
+				position: relative;
+			}
+			nav li img{
+				float: right;
+				padding-top:5px ;
+				margin-right: 20px;
+				
+			}
+			nav li span{
+				display: block;
+				color: #fff;
+				position: absolute;
+			    right:28px;
+				top:3px;
+			}
+			
+			nav #selfdefine {
+				padding-left: 65px;
+			}
+			
+			nav #book {
+				list-style: url("image/Book of Wisdom.png");
+			}
+			
+			nav #tutor {
+				list-style: url("image/Video Camera.png");
+			}
+			
+			nav #stock {
+				list-style: url("image/Painting.png");
+			}
+			
+			nav #infog {
+				list-style: url("image/Chart.png");
+			}
+			
+			nav a .hidden {
+				position: absolute;
+				margin-left: -38px;
+				top: 468px;
+				display: none;
+			}
+			
+			nav  a:link {
+				color: #b7c0cd;
+				text-decoration: none;
+			}
+			
+			nav  a:hover,
+			nav  a:visited {
+				color: #fff;
+				text-decoration: none;
+			}
+			nav  a:hover .hidden,
+			nav  a:focus .hidden{
+				display:block;
+			}
+			
+			nav hr {
+				margin-left: 30px;
+				margin-right: 30px;
+				border: 1px solid #2a3547;
+			}
+			
+			nav footer {
+				position: fixed;
+				bottom: 20px;
+				left: 130px;
+			}
+			
+			nav footer img {
+				display: block;
+				margin: 0 auto;
+			}
+			
+			nav footer #fill {
+				margin-top: -4px;
+				padding-right: 149px;
+			}
+			
+			nav footer p {
+				color: #fff;
+				text-align: center;
+			}
+			
+			nav footer span {
+				float: right;
+				margin-left: 15px;
+			}
+			
+			header {
+				height: 80px;
+				border: 1px solid #e5e5e5;
+				padding-left: 30px;
+				position: relative;
+			}
+			
+			header #imgface {
+				position: absolute;
+				bottom: 18px;
+				right: 180px;
+			}
+			
+			header div {
+				width: 16px;
+				height: 16px;
+				background-color: #FFF;
+				border-radius: 10px;
+				position: absolute;
+				bottom: 18px;
+				right: 180px;
+			}
+			
+			header #status {
+				position: absolute;
+				bottom: 18px;
+				right: 180px;
+			}
+			
+			header span {
+				position: absolute;
+				bottom: 40px;
+				right: 105px;
+			}
+			
+			header p {
+				position: absolute;
+				bottom: 5px;
+				right: 80px;
+			}
+			
+			header #dropdown {
+				position: absolute;
+				bottom: 35px;
+				right: 25px;
+			}
+			
+			.rightdiv>div {
+				display: flex;
+			}
+			
+			.rightdiv aside {
+				width: 400px;
+				border: 1px solid #e5e5e5;
+			}
+			
+			.rightdiv aside>div {
+				width: 400px;
+				border-bottom: 1px solid #e5e5e5;
+				position: relative;
+			}
+			
+			.rightdiv #Search {
+				height: 70px;
+				position: relative;
+			}
+			
+			#Search input {
+				height: 35px;
+				width: 350px;
+				color: #9fa9ba;
+				border: 1px solid #e5e5e5;
+				border-radius: 4px;
+				margin-top: 15px;
+				margin-left: 25px;
+			}
+			
+			#Search img {
+				position: absolute;
+				right: 40px;
+				top: 8px;
+			}
+			
+			.rightdiv img {
+				padding-top: 20px;
+				padding-left: 25px;
+			}
+			
+			.rightdiv aside p {
+				padding-left: 25px;
+				padding-right: 10px;
+			}
+			.rightdiv aside #first_person{
+				position: relative;
+			}
+			.rightdiv aside #first_person h3{
+				color:#2399f1;
+				margin-left: -25px;
+				margin-top: 8px;
+			}
+			.rightdiv aside #first_person>span{
+				float:right;
+				/*color: #fff;*/
+				margin-top: -60px;
+				margin-right: 10px;
+				position: relative;
+			}
+			.rightdiv aside #first_person>span p{
+				color: #fff;
+				position: absolute;
+				top:7px;
+				left:7px;
+			}
+			.rightdiv aside .hidden{
+				position: absolute;
+				left:-27px;
+				top:-20px;
+				display: none;
+			}
+			.rightdiv aside #first_person:hover .hidden,
+			.rightdiv aside #first_person:visited .hidden{
+				display: block;
+			}
+			
+			.rightdiv .dingwei {
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				left: 80px;
+			}
+			
+			.rightdiv .dingwei span {
+				position: absolute;
+				top: 45px;
+				color: #b5b5b5;
+			}
+			
+			.rightdiv .dingwei .date {
+				position: absolute;
+				top: 27px;
+				right: 100px;
+				color: #7f8fa4;
+			}
+			
+			section>div {
+				height: 70px;
+				border-bottom: 1px solid #e5e5e5;
+				position: relative;
+			}
+			
+			section>div h2 img{
+				margin-left: -18px;
+			}
+			section>div #right_span {
+				width: 110px;
+				height: 32px;
+				background-color: #fbfcfd;
+				border: 2px solid #ced0da;
+				border-radius: 4px;
+				position: absolute;
+				bottom: 20px;
+				right: 196px;
+			}
+			
+			section #right_span img {
+				margin-left: -12px;
+				margin-top: -12px;
+			}
+			
+			section>div span {
+				color: #56688a;
+				float: right;
+				margin-right: 110px;
+				margin-top: -25px;
+			}
+			
+			section>div #right_div2 {
+				width: 73px;
+				height: 32px;
+				background-color: #fbfcfd;
+				border: 2px solid #ced0da;
+				border-radius: 4px;
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+			}
+			
+			section #right_div2 img {
+				margin-left: -5px;
+				margin-top: -9px;
+			}
+			
+			section article div {
+				margin-left: 90px;
+				margin-top: -60px;
+			}
+			
+			section article p {
+				margin-top: -10px;
+			}
+			
+			section article span {
+				margin-left: 5px;
+				font-size: 14px;
+				color: #7f8fa4;
+			}
+			section article>div{
+				position: relative;
+			}
+			#second{
+				height:490px;
+			}
+			section article #twopic{
+				margin-left: 0px;
+				margin-top:0px;
+				position: absolute;
+				left:-25px;
+				bottom:-120px;
+			}
+			section article .floatbox {
+				margin-left: 0px;
+				margin-top:-10px;
+				width:156px;
+				height: 100px;
+				float:left;
+				padding-right: 10px;
+			}
+			section article #bigpic{
+				width:156px;
+				height: 100px;
+				border-radius: 4px;
+				display:none;
+				background-color: rgba(0,0,0,0.6);
+				position: absolute;
+			    left:-65px;
+				bottom:-20px;
+			}
+			section article #bigpic #base{
+				margin-top:9px;
+				margin-left: 30px;
+			}
+			section article #bigpic #open{
+				position: absolute;
+				bottom: 36px;
+				left:47px;
+			}
+			section article #floatbox1:hover #bigpic{
+				display: block;
+			}
+			section article #bigpic2{
+				width:156px;
+				height: 100px;
+				border-radius: 4px;
+				display:none;
+				background-color: rgba(0,0,0,0.6);
+				position: absolute;
+			    left:100px;
+				bottom:-20px;
+			}
+			section article #bigpic2 #base{
+				margin-top:9px;
+				margin-left: 30px;
+			}
+			section article #bigpic2 #open{
+				position: absolute;
+				bottom: 36px;
+				left:47px;
+			}
+			section article #floatbox2:hover #bigpic2{
+				display: block;
+			}
+			section #timeline {
+				border: 1px solid #d9dde3;
+			}
+			
+			section #newmessages {
+				/*clear: both;*/
+				border: 1px solid #2399f1;
+			}
+			
+			section #time {
+				width: 70px;
+				margin: 0 auto;
+				text-align: center;
+				background-color: #FFF;
+				color: #d9dde3;
+				font-size: 14px;
+				margin-top: -16px;
+			}
+			
+			section #messages {
+			
+				width: 120px;
+				margin: 0 auto;
+				text-align: center;
+				background-color: #FFF;
+				color: #2399f1;
+				font-size: 14px;
+				margin-top: -16px;
+			}
+			
+			section footer {
+				position: relative;
+			}
+			
+			section input {
+				display: block;
+				margin-left: 102px;
+				height: 50px;
+				width: 90%;
+				border: 1px solid #ced0da;
+			}
+			
+			section footer #basefooter {
+				position: absolute;
+				bottom: 0px;
+				left: 25px;
+			}
+			
+			section footer #add {
+				position: absolute;
+				bottom: 20px;
+				left: 45px;
+			}
+		</style>
+		<!--<link href="" rel="">-->
+	</head>
+
+	<body>
+		<div>
+			<div class="leftdiv">
+				<!--最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，
+		左下方两个按钮相对浏览器左下角固定位置-->
+				<aside>
+					<div class="headplace">
+						<img src="image/Base.png" alt="">
+						<a href="#"><img src="image/Item 1.png" alt="" class="item" id="item1">
+							<!--鼠标停留可以显示的图标-->
+							<img src="image/Status14.png" alt="" class="hidden">
+						</a>
+						<img src="image/Base2.png" alt="">
+						<a href="#"><img src="image/Item 2.png" alt="" class="item" id="item2"></a>
+						<img src="image/Base3.png" alt="">
+						<a href="#"><img src="image/Item 3.png" alt="" class="item" id="item3"></a>
+						<img src="image/Base4.png" alt="">
+						<a href="#"><img src="image/Plus Icon.png" alt="" class="item" id="item4"></a>
+					</div>
+
+					<div class="footplace">
+						<a href="#"><img src="image/Grid.png" alt=""></a>
+						<a href="#"><img src="image/Settings.png" alt=""></a>
+					</div>
+
+				</aside>
+				<!--导航列固定宽度，高度也是自适应浏览器高度
+        最下面的Monthly Goals部分的内容相对浏览器下边固定位置-->
+				<nav>
+					<div>
+						<p>MENU</p>
+						<a href="#"><img src="image/Settings.png" alt=""></a>
+					</div>
+					<ul>
+						<li>Overview</li>
+						<li>Sales 
+							<img src="image/Basen.png">
+							<span>54</span>
+						</li>
+						<li>Your Staff</li>
+						<li>Analytics & Targeting</li>
+						<li>What`s New</li>
+					</ul>
+					<hr>
+					<div>
+						<p>YOUR PRODUCTS</p>
+						<a href="#"><img src="image/Settings.png" alt=""></a>
+					</div>
+					<ul id="selfdefine">
+						<li id="book">Books</li>
+						<li id="tutor">Tutorials</li>
+						<li id="stock">Stocks</li>
+						<li id="infog">Infographics</li>
+					</ul>
+					<hr>
+					<div>
+						<p>DASHBOARD</p>
+						<a href="#"><img src="image/Settings.png" alt=""></a>
+					</div>
+					<ul>
+						<a href="#">
+							<!--鼠标停留可以显示的图标-->
+							<img src="image/Status14.png" alt="" class="hidden">
+							<li>
+								Messages
+								<img src="image/Basen.png">
+								<span>21</span>
+							</li>
+						</a><!--此处应该局部页面刷新-->
+						<li>Connections</li>
+						<li>Integrations
+						<img src="image/Basered.png">
+						<span>! </span>
+						</li>
+						<li>Account Settings</li>
+						<li>App Settings</li>
+					</ul>
+
+					<footer>
+						<p>Monthly Goals <span>$580/$3200</span></p>
+						<img src="image/Base13.png" alt="">
+						<img src="image/Fill.png" alt="" id="fill">
+					</footer>
+				</nav>
+			</div>
+			<!--整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置-->
+			<div class="rightdiv">
+				<header>
+					<h1>Message</h1>
+					<img src="image/Pic9.png" alt="" id="imgface">
+					<div></div>
+					<img src="image/Status2.png" alt="" id="status">
+					<span>Jordan J.</span>
+					<p>Administrator</p>
+					<img src="image/dropdown.png" alt="" id="dropdown">
+				</header>
+				<!--白色区域左侧列固定宽度，右侧列自适应宽度-->
+				<div>
+					<aside>
+						<div id="Search">
+							<input type="text" value="Search">
+							<a href="#"><img src="image/Search icon.png" alt=""></a>
+						</div>
+						
+						<div id="first_person">
+							<!--鼠标停留可以显示的图标-->
+							<img src="image/Colour highlight.png" alt="" class="hidden">
+							<img src="image/Pic.png" alt="">
+							<div class="dingwei">
+								<h3>
+									<img src="image/Status14.png" >
+									Bessie Berry
+								</h3>
+								<span>Twitter</span>
+								<span class="date">3m</span>
+							</div>
+							<p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable...</p>			
+							<span><img src="image/Basef.png">
+							<p>4</p>
+							</span>
+						</div>
+						<div>
+							<img src="image/Pic2.png" alt="">
+							<div class="dingwei">
+								<h3>Victor Weber</h3>
+								<span>Adobe</span>
+								<span class="date">8m</span>
+							</div>
+							<p>I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...</p>
+						</div>
+						<div>
+							<img src="image/Pic3.png" alt="">
+							<div class="dingwei">
+								<h3>Dustin Benson</h3>
+								<span>Facebook</span>
+								<span class="date">Yesterday</span>
+							</div>
+							<p>If there is anyone who needs an invitation please add yourself in the comments of this post!</p>
+						</div>
+						<div>
+							<img src="image/Pic4.png" alt="">
+							<div class="dingwei">
+								<h3>Jack Mason</h3>
+								<span>Yahoo</span>
+								<span class="date">Yesterday</span>
+							</div>
+							<p>BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...</p>
+						</div>
+						<div>
+							<img src="image/Pic5.png" alt="">
+							<div class="dingwei">
+								<h3>Stephen Shelton</h3>
+								<span>Snapchat</span>
+								<span class="date">13 Jun</span>
+							</div>
+							<p>Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...</p>
+						</div>
+						<div>
+							<img src="image/Pic6.png" alt="">
+							<div class="dingwei">
+								<h3>Sally Willis</h3>
+								<span>Twitter</span>
+								<span class="date">12 Jun</span>
+							</div>
+							<p>Yes, it's O2: 'internet extreme', which is no longer offered.</p>
+						</div>
+						<div>
+							<img src="image/Pic7.png" alt="">
+							<div class="dingwei">
+								<h3>Robert Patton</h3>
+								<span>A Team</span>
+								<span class="date">9 Jun</span>
+							</div>
+							<p>I change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.</p>
+						</div>
+					</aside>
+
+					<section>
+						<div>
+							<h2>Bessie Berry<img src="image/Status.png" alt=""></h2>
+							<div id="right_span">
+								<a href="#"><img src="image/User icon.png" alt=""></a>
+								<a href="#"><img src="image/Upload icon.png" alt=""></a>
+								<a href="#"><img src="image/Trash icon.png" alt=""></a>
+							</div>
+							<span> 1 of 28</span>
+							<div id="right_div2">
+								<a href="#"><img src="image/Arrow left.png" alt=""></a>
+								<a href="#"><img src="image/Arrow right.png" alt=""></a>
+							</div>
+							<!--<img src="" alt=""> 
+							<span>| 1 of 28</span>-->
+						</div>
+						<article>
+							<img src="image/Pic.png" alt="">
+							<div>
+								<h3>Bessie Berry <span> 8:31 AM</span></h3>
+								<p>Hi guys Ive got the O2 package and have really slow internet. A speed check online said i can get 3mbps but it seems more like 0.5 these days, just freezing and taking ages to open pages and open audio files for example. I have decided to switch to the UPC package which offers 10mbps but do you think i will get it?</p>
+							</div>
+							<img src="image/Pic9.png" alt="">
+							<div>
+								<h3>Jordan Jackson <span> 8:31 AM</span></h3>
+								<p>I have internet for 9 month and nevere could benefit from the full capacity of 5Mbit/s as it is filtered by O2 when it detect traffic on public p2p sharing in my situation all my internet speed slows to 512Kbit/s. I never had 400KB/s on when downloading from p2p public servers like torrent emule etc. I downoad with 500KB/s from private trakers instead. So conlcusion O2 block trafic on p2p connections. I have made hundreds of test in Italy and Sweden and Romania with the same file to doanload with the same setting and same antivirus and just needed to open ports in firewall and forward same ports and the speed was at full capacity in 1 minute. here in 9 month never had this luck.</p>
+							</div>
+						</article >
+						<hr id="timeline">
+						<p id="time">Tuesday</p>
+						<article id="second">
+							<img src="image/Pic.png" alt="">
+							<div>
+								<h3>Bessie Berry <span> 8:31 AM</span></h3>
+								<p>Funny comparison. so would the proper antivirus not slow down the internet as much or do you mean a freebie doenst protect the computer from viruses?</p>
+							</div>
+							<img src="image/Pic9.png" alt="">
+							<div>
+								<h3>Jordan Jackson <span> 8:31 AM</span></h3>
+								<p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2, and haven't had any problems. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep track of what I'm doing on it. I max out at about 3 Mb/sec down, and 350 Kb/sec up. Probably because of a noisy telephone line, not because I'm being throttled. When my uploads go over 25 KB/sec (note, bytes, not bits), my download speed suffers. This is expected, as downloads require upload bandwidth as well. </p>
+								<div id="twopic">
+								<div class="floatbox" id="floatbox1">
+									<img src="image/Pic14.png" alt="">
+								    <div id="bigpic">
+									<img src="image/Base12.png" alt="" id="base">
+									<a href=""><img src="image/Open icon.png" alt="" id="open"></a>
+								    </div>
+								</div>
+								<div class="floatbox" id="floatbox2">
+									<img src="image/Photo2.png" alt="">
+									<div id="bigpic2">
+									<img src="image/Base12.png" alt="" id="base">
+									<a href=""><img src="image/Open icon.png" alt="" id="open"></a>
+								    </div>
+								</div>
+							</div>
+						</article>
+						<hr id="newmessages">
+						<p id="messages">New Messages</p>
+						<article>
+							<img src="image/Pic.png" alt="">
+							<div>
+								<h3>Bessie Berry <span> 8:31 AM</span></h3>
+								<p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep track of what I'm doing on it. </p>
+							</div>
+						</article>
+						<footer>
+							<input type="text" value="Well, kinda both :) but more of that second option, i`ve seen many systems infected and crawling with">
+							<img src="image/Basefooter.png" alt="" id="basefooter">
+							<a href="#"><img src="image/Add icon.png" alt="" id="add"></a>
+						</footer>
+
+					</section>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

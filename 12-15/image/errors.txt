@@ -1,0 +1,2 @@
+[2019-06-04 19:13:40] layer "Base.png": Duplicate path: Base.png
+[2019-06-04 19:21:38] layer "Pic.png": Duplicate path: Pic.png
