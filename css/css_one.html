@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style>
+			h1 {
+				text-align: center;
+			}
+			
+			.h1change {
+				text-align: center;
+				color: blue;
+				transition: color 0.5s linear;
+			}
+			.h1change1 {
+				text-align: center;
+				color: black;
+				transition: color 0.5s linear;
+			}
+			hr {
+				width: 0px;
+				border: 0px solid blue;
+				background-color: blue;
+			}
+			
+			.hrchange {
+				width: 150px;
+				border: 1px solid blue;
+				background-color: blue;
+				transition: width 0.5s linear;
+			}
+			.hrchange1 {
+				width: 0px;
+				border: 1px solid blue;
+				transition: width 0.5s linear;
+			}
+			input{display: block;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 id="h1">前端学院</h1>
+		<hr id="hr">
+		<input type="button" value="切换样式" onclick="changeStyle()" id="button">
+		<script type="text/javascript">
+			var h1 = document.getElementById("h1");
+			var hr = document.getElementById("hr");
+			var nub = 1;
+
+			function changeStyle() {
+				if(nub % 2) {
+					h1.classList.add('h1change');
+					hr.classList.add('hrchange');
+				} else {
+					h1.classList.add('h1change1');
+					hr.classList.add('hrchange1');
+				}
+				nub++;
+			}
+		</script>
+	</body>
+
+</html>
