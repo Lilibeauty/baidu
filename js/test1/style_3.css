@@ -1,0 +1,41 @@
+body{
+font-size:small;
+margin:0px;
+}
+#jianli{
+background-color:#666568;
+height:50px;
+margin-left:2px;
+margin-right:2px;
+}
+h1{
+color:#fff;
+font-size:2.5em;
+padding-left:30px;
+}
+h2{
+font-size:1.5em;
+}
+p{
+font-weight:bold;
+}
+span{
+font-weight:normal;
+}
+#tableContainer{
+  display:table;
+  border-spacing:2px;
+}
+.tablerow{
+	display:table-row;
+}
+.tablecell{
+	display:table-cell;
+	vertical-align:top;
+}
+.first{
+	background-color:#B0B0B0;
+	width:150px;
+	vertical-align:center;
+	text-align:center;
+}

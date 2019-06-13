@@ -1,0 +1,16 @@
+body{
+font-size:small;
+margin-left:40px;
+}
+h1{
+font-size:2.5em;
+}
+h2{
+	font-size:1.5em;
+}
+p{
+font-weight:bold;
+}
+span{
+font-weight:normal;
+}
