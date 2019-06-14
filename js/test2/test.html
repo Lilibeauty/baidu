@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE ECMAScript</title>
+	</head>
+
+	<body>
+		<input id="first_number" type="number" placeholder="第一个数字">.
+		<input id="second_number" type="number" placeholder="第二个数字">
+		<button id="add_btn">加</button>
+		<button id="minus-btn">减</button>
+		<button id="times-btn">乘</button>
+		<button id="divide-btn">除</button>
+		<p id="result">运算结果</p>
+		<!-- 点对应加减乘除按钮的时候，将两个输入框中的数字做对应的算术，并将结果显示在id为result的p标签内。
+暂时不用做任何异常处理-->
+		<script>
+			
+			const addBtn = document.getElementById("add_btn");
+			addBtn.addEventListener('click', AddBtn);
+
+			function AddBtn() {
+				var firstNumber = parseFloat(document.getElementById("first_number").value);
+				var secondNumber = parseFloat(document.getElementById("second_number").value);
+		
+				if(isNaN(firstNumber) || isNaN(secondNumber)) {
+					
+					document.getElementById("result").innerHTML = "请输入数字";
+						//判断两个输入框是否都是正常输入了数字类型的内容
+				} else  {
+					var resultNumber = firstNumber + secondNumber;
+					document.getElementById("result").innerHTML = resultNumber;
+				}
+			}
+			const miunsBtn = document.getElementById("minus-btn");
+			miunsBtn.addEventListener('click', MiunsBtn);
+
+			function MiunsBtn() {
+				var firstNumber = parseFloat(document.getElementById("first_number").value);
+				var secondNumber = parseFloat(document.getElementById("second_number").value);
+				if(isNaN(firstNumber) || isNaN(secondNumber)) {
+					document.getElementById("result").innerHTML = "请输入数字";
+						//判断两个输入框是否都是正常输入了数字类型的内容
+				} else {
+					var resultNumber = firstNumber - secondNumber;
+					document.getElementById("result").innerHTML = resultNumber;
+				}
+			}
+			const timesBtn = document.getElementById("times-btn");
+			timesBtn.addEventListener('click', TimesBtn);
+
+			function TimesBtn() {
+				var firstNumber = parseFloat(document.getElementById("first_number").value);
+				var secondNumber = parseFloat(document.getElementById("second_number").value);
+				if(isNaN(firstNumber) || isNaN(secondNumber)) {
+					document.getElementById("result").innerHTML = "请输入数字";
+						//判断两个输入框是否都是正常输入了数字类型的内容
+				} else {
+					var resultNumber = firstNumber * secondNumber;
+					document.getElementById("result").innerHTML = resultNumber;
+				}
+			}
+			const divideBtn = document.getElementById("divide-btn");
+			divideBtn.addEventListener('click', DivideBtn);
+
+			function DivideBtn() {
+				var firstNumber = parseFloat(document.getElementById("first_number").value);
+				var secondNumber = parseFloat(document.getElementById("second_number").value);
+				if(isNaN(firstNumber) || isNaN(secondNumber)) {
+					document.getElementById("result").innerHTML = "请输入数字";
+						//判断两个输入框是否都是正常输入了数字类型的内容
+				} else if(secondNumber == 0) {
+					//除法的时候除数是否为0
+					document.getElementById("result").innerHTML = "第二个数字不能为0";
+				} else{
+					var resultNumber = firstNumber / secondNumber;
+					document.getElementById("result").innerHTML = resultNumber;
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<!--小练习，练习使用循环实现一个九九乘法表
+
+第一步，最低要求：在Console中按行输出 n * m = t
+然后，尝试在网页中，使用table来实现一个九九乘法表-->
+<script>
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			var resultNumber = i*j;
+			console.log(i+"*"+j+"="+resultNumber);
+			document.write(i+"*"+j+"="+resultNumber);
+		}
+		document.write("<br>");
+	}
+</script>
+	</body>
+</html>
