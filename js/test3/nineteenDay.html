@@ -66,17 +66,19 @@
 				return span;
 			}
 
-			function findListItem(sectionId, spanCont) {
+			function findListItem( spanCont) {
 				// 返回某个section下，所有所包含span内容为spanCont的LI标签
 				var section = document.getElementsByClassName("section");
 				var span = section[0].getElementsByTagName("span");
 				for(var i = 0;i<span.length;i++){
 				if(span[i].innerHTML == "HTML"){
 					var returnNumber;
-					returnNumber += span[i].innerHTML;
+					returnNumber = span[i].innerHTML;
+					console.log(returnNumber);
+				        return returnNumber;
 				}
-				console.log(returnNumber);
-				return returnNumber;
+				//console.log(returnNumber);
+				//return returnNumber;
 				}
 			}
 
@@ -87,6 +89,10 @@
 				console.log(active[0].innerHTML);
 				return active[0].innerHTML;
 			}
+			getAllListItem();
+			findAllHtmlSpanInOneSection();
+			findListItem("HTML");
+			getActiveLinkContent();
 		</script>
 	</body>
 
