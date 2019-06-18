@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+
+	<body>
+		<input id="name" type="text">
+		<button id="submit-btn">Submit</button>
+		<script>
+			document.getElementById("submit-btn").onclick = function() {
+					var name = document.getElementById("name").value;
+					console.log(name);
+				}
+				/*当点击按钮 submit-btn 时，在console中输出 name 中的内容*/
+			document.onkeypress = function(event) {
+				 //console.log(event.keyCode);
+				//var e = event || window.event || arguments.callee.caller.arguments[0];
+
+				if(event.keyCode == 13) {
+					var name = document.getElementById("name").value;
+					console.log(name);
+				}
+			}
+
+			//在输入过程中，如果按回车键，则同样执行上一条的需求
+			document.onkeydown = function(event) {
+					if(event.keyCode == 27) {
+						var name = document.getElementById("name");
+						name.value = "";
+					}
+				}
+				//在输入过程中，如果按 ESC 键，则把输入框中的内容清空
+		</script>
+	</body>
+
+</html>

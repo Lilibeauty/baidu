@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style>
+			.section-practice-img {
+				position: absolute;
+				z-index: -0;
+				right: 2rem;
+				bottom: 30px;
+				width: 480px;
+				height: 480px;
+				background: url(erik_ce204002.jpg) repeat-y;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="erikface" title="百度EFE团队 Web前端主任架构师 erik" class="section-practice-img"></div>
+		<script>
+			var img = document.getElementById("erikface");
+			var i = -2;
+			var targ = true;
+			
+			var change = setInterval(function() {
+				//console.log(i);
+				if(targ) {
+					i += -480;
+					img.style.backgroundPosition = "0px " + i + "px";
+					//console.log(i);
+				}else{
+					i += 480;
+					img.style.backgroundPosition = "0px " + i + "px";
+					//console.log(i);
+				}
+				if(i <=-7682 ){
+					targ = false;
+				}else if(i>=-2){
+					targ = true;
+				}
+			}, 60);
+		</script>
+	</body>
+	</html>
