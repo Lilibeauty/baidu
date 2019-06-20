@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+			var arr1 = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+			var arr2 = [[10, 14],[16, 60],[7, 44],[26, 35],[22, 63]];
+			var arr3 = [{
+				id: 1,
+				name: 'candy',
+				value: 40
+			}, {
+				id: 2,
+				name: 'Simon',
+				value: 50
+			}, {
+				id: 3,
+				name: 'Tony',
+				value: 45
+			}, {
+				id: 4,
+				name: 'Annie',
+				value: 60
+			}];
+			function campareNumber(a,b){
+				return a-b;
+			}
+			function campareToBig(a,b){				
+				return b-a;
+			}
+			var arrsmall = arr.sort(campareNumber);
+			console.log(arrsmall);//从小到大
+			var arrBig = arr.sort(campareToBig);
+			console.log(arrBig);//从大到小
+			var arr1Small = arr1.sort();
+			console.log(arr1Small); //a-z的顺序
+			var arr1Big = arr1.sort(campareToBig);
+			console.log(arr1Big);//z-a的顺序
+			arr2.sort(function(a,b){
+				return (b[1]-a[1]);
+			});//第二个数字从大到小
+			console.log(arr2);
+			console.log(arr3.sort(function(a,b){
+				return (a.value-b.value);
+			}));
+			//value值从小到大进行排序后输出
+		</script>
+	</body>
+
+</html>

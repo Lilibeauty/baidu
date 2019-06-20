@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			var scoreObject = {
+					"Tony": {
+						"Math": 95,
+						"English": 79,
+						"Music": 68
+					},
+					"Simon": {
+						"Math": 100,
+						"English": 95,
+						"Music": 98
+					},
+					"Annie": {
+						"Math": 54,
+						"English": 65,
+						"Music": 88
+					}
+				} 
+			
+			arr1 = Object.keys(scoreObject);
+			arr2 = Object.values(scoreObject);
+			arr3 = Object.entries(scoreObject);    
+			console.log(arr1);
+			console.log(arr2);
+			console.log(arr3);
+			//转为二维数组
+
+			var menuArr = [
+				[1, "Area1", -1],
+				[2, "Area2", -1],
+				[3, "Area1-1", 1],
+				[4, "Area1-2", 1],
+				[5, "Area2-1", 2],
+				[6, "Area2-2", 2],
+				[7, "Area1-2-3", 4],
+				[8, "Area2-2-1", 6],
+			];
+			//数组转为对象
+			var obj = Object.assign({},menuArr);
+			console.log(obj);
+			//用不同的数据结构进行存储，以及相互的转换
+		</script>
+	</body>
+
+</html>
