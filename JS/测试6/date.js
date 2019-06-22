@@ -126,10 +126,11 @@ function chooseDate(m) {
 	}
 }//注意选择不同月份的时候，日期的可选范围不一样，比如1月可以选31天，11月只有30天，注意闰年
 function dateMath(a, b) {
-	var s = ((a - b) / 1000) % 60;
-	var m = ((a - b - s * 1000) / 60000) % 60;
-	var h = ((a - b - s * 1000 - m * 60000) / 3600000) % 24;
-	var d = (a - b - s * 1000 - m * 60000 - 3600000 * h) / 86400000;
+	var time = a-b;
+	var d = Math.floor(time/(1000*3600*24));
+	var h = Math.floor((time-d*1000*3600*24)/(1000*3600));
+	var m = Math.floor((time-d*1000*3600*24-3600*1000*h)/60000);
+	var s = Math.floor((time-d*1000*3600*24-3600*1000*h-m*60000)/1000);
 	var str = d + "天" + h + "小时" + m + "分钟" + s + "秒";
 	//console.log(str);
 	return str;
