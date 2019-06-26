@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+    width:204px;
+    margin-left: 10px;
+    border: 2px solid #000;
+}
+input{
+	width:200px;
+	padding: 2px;
+	margin-left: 10px;
+}
+li{
+	list-style-type: none;
+}
+.liclass{
+	background-color: #532b76;
+}
